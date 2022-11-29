@@ -1,0 +1,17 @@
+--- lp_utils.c
++++ lp_utils.c
+@@ -5,7 +5,13 @@
+ #include "lp_lib.h"
+ #include "lp_utils.h"
+ #include <time.h>
+-#include <sys/timeb.h>
++#if defined INTEGERTIME || defined CLOCKTIME || defined PosixTime
++# include <time.h>
++#elif defined EnhTime
++# include <windows.h>
++#else
++# include <sys/timeb.h>
++#endif
+ #include "lp_bit.h"
+ 
+ #ifdef FORTIFY
