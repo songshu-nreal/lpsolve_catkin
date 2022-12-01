@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(lpsolve)
 
-add_definitions(-O3 -DYY_NEVER_INTERACTIVE -DPARSER_LP -DINVERSE_ACTIVE=INVERSE_LUSOL -DRoleIsExternalInvEngine)
+add_definitions(-O3 -DYY_NEVER_INTERACTIVE -DPARSER_LP -DINVERSE_ACTIVE=INVERSE_LUSOL -DRoleIsExternalInvEngine -DINTEGERTIME)
 
 include_directories(bfp bfp/bfp_LUSOL bfp/bfp_LUSOL/LUSOL colamd shared ${PROJECT_SOURCE_DIR})
 
