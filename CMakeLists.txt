@@ -26,7 +26,7 @@ ExternalProject_Add(lpsolve_src
 
 cs_add_library(${PROJECT_NAME} src/dependency_tracker.cc)
 add_dependencies(${PROJECT_NAME} lpsolve_src)
-target_link_libraries(${PROJECT_NAME} ${CATKIN_DEVEL_PREFIX}/lib/liblpsolve${CMAKE_SHARED_LIBRARY_SUFFIX})
+target_link_libraries(${PROJECT_NAME} ${CATKIN_DEVEL_PREFIX}/lib/liblpsolve${CMAKE_STATIC_LIBRARY_SUFFIX})
 
 cs_install()
 
